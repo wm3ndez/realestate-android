@@ -1,4 +1,4 @@
-package com.wmendez.realestate;
+package com.wmendez.realestate.ui;
 
 import android.app.Activity;
 import android.app.ActionBar;
@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.os.Build;
 
+import com.wmendez.realestate.R;
 import com.wmendez.realestate.ui.PropertyListFragment;
 
 

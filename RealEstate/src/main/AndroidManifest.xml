@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.wmendez.realestate">
+    package="com.wmendez.realestate" >
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -8,10 +8,10 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme" >
         <activity
-            android:name="com.wmendez.realestate.MainActivity"
-            android:label="@string/app_name">
+            android:name=".ui.MainActivity"
+            android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,7 +23,12 @@
             android:name=".db.Provider"
             android:authorities="pprs"
             android:enabled="true"
-            android:exported="true"/>
+            android:exported="true" />
+
+        <activity
+            android:name=".ui.PropertyDetailActivity"
+            android:label="@string/title_activity_property_detail" >
+        </activity>
     </application>
 
 </manifest>

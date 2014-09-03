@@ -7,5 +7,9 @@
         android:id="@+id/grid_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:numColumns="@integer/column_count" />
+        android:background="#e5e5e5"
+        android:horizontalSpacing="1dp"
+        android:numColumns="@integer/column_count"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="1dp" />
 </android.support.v4.widget.SwipeRefreshLayout>
