@@ -3,6 +3,7 @@ package com.wmendez.realestate.models;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Property implements Parcelable {
@@ -66,10 +67,8 @@ public class Property implements Parcelable {
         baths = in.readInt();
         beds = in.readInt();
         price = in.readFloat();
-        try {
-            in.readTypedList(images, Image.CREATOR);
-        } catch (NullPointerException ex) {
-            //TODO: Fix this
-        }
+        images = new ArrayList<Image>();
+        in.readTypedList(images, Image.CREATOR);
     }
+
 }
