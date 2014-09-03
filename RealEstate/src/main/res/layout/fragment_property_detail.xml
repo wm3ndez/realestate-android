@@ -2,15 +2,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:padding="0dp"
     tools:context="com.wmendez.realestate.ui.PropertyDetailActivity$PlaceholderFragment">
 
+    <android.support.v4.view.ViewPager
+        android:id="@+id/property_images"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/property_details_image_height" />
+
     <TextView
-        android:text="@string/hello_world"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:id="@+id/property_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/property_images"
+        android:layout_margin="8dp"
+        android:textAppearance="?android:textAppearanceLarge" />
 
 </RelativeLayout>

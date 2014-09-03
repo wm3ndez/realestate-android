@@ -1,6 +1,7 @@
 package com.wmendez.realestate.adapters;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,6 +23,7 @@ import butterknife.InjectView;
 
 public class PropertyListAdapter extends BaseAdapter {
 
+    private static final String TAG = PropertyListAdapter.class.getCanonicalName();
     private Context mContext;
     List<Property> propertyList;
     private LayoutInflater mInflater;
@@ -66,8 +68,7 @@ public class PropertyListAdapter extends BaseAdapter {
         if (property != null) {
             if (property.images.size() > 0) {
                 Image image = property.images.get(0);
-                String url = String.format("%s%s", APIClient.API_URL, image.url);
-                Picasso.with(mContext).load(url).into(holder.image);
+                Picasso.with(mContext).load(image.getUrl()).into(holder.image);
             }
 
             holder.title.setText(property.title);

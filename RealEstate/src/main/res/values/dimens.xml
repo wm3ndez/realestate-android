@@ -6,5 +6,6 @@
     <dimen name="property_image_size">200dp</dimen>
     <dimen name="default_padding">8dp</dimen>
     <dimen name="property_activity_padding">4dp</dimen>
+    <dimen name="property_details_image_height">240dp</dimen>
 
-    </resources>
+</resources>

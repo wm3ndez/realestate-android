@@ -3,6 +3,8 @@ package com.wmendez.realestate.models;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import com.wmendez.realestate.network.APIClient;
+
 public class Image implements Parcelable {
 
     public String url;
@@ -35,5 +37,9 @@ public class Image implements Parcelable {
         url = in.readString();
         order = in.readInt();
         title = in.readString();
+    }
+
+    public String getUrl(){
+        return String.format("%s%s", APIClient.API_URL, url);
     }
 }
