@@ -8,15 +8,22 @@ import retrofit.Callback;
 import retrofit.http.GET;
 
 public class APIClient {
-    public static final String API_URL = "http://192.168.1.79:8000";
+    public static final String API_URL = "http://192.168.1.84:8000";
+
+    public class APIResponse {
+        public int count;
+        public String next;
+        public String previous;
+        public List<Property> results;
+    }
 
 
     public interface API {
-        @GET("/api/propiedades/?format=json")
-        List<Property> propertyList();
+        @GET("/api/listings/?format=json")
+        APIResponse propertyList();
 
-        @GET("/api/propiedades/?format=json")
-        void propertyList(Callback<List<Property>> cb);
+        @GET("/api/listings/?format=json")
+        void propertyList(Callback<APIResponse> cb);
     }
 
 }

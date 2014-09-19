@@ -49,7 +49,7 @@ public class PropertyListFragment extends Fragment implements SwipeRefreshLayout
         RequestInterceptor requestInterceptor = new RequestInterceptor() {
             @Override
             public void intercept(RequestFacade request) {
-                request.addHeader("Authorization", "Token 7de36fd71d498057b71f919bcf787069a0cbc3cb");
+                request.addHeader("Authorization", "Token 95436bbf22d2f91a80e594cd2730e97629b378f4");
             }
         };
 
@@ -88,13 +88,14 @@ public class PropertyListFragment extends Fragment implements SwipeRefreshLayout
 
     @Override
     public void onRefresh() {
-        api.propertyList(new Callback<List<Property>>() {
+        api.propertyList(new Callback<APIClient.APIResponse>() {
 
 
             @Override
-            public void success(List<Property> properties, Response response) {
+            public void success(APIClient.APIResponse apiResponse, Response response) {
                 swipeLayout.setRefreshing(false);
-                adapter.setPropertyList(properties);
+                adapter.setPropertyList(apiResponse.results);
+
             }
 
             @Override
