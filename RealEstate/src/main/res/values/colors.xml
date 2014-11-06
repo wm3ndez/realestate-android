@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="UnusedResources">
 
+    <!-- Material -->
+    <color name="colorPrimary">#259b24</color>
+    <color name="colorPrimaryDark">#056f00</color>
+
+    <color name="colorSecondary">@color/material_deep_teal_200</color>
+    <color name="colorSecondaryDark">@color/material_deep_teal_500</color>
+
+    <color name="windowBackgroundColor">#333333</color>
+    <color name="black_translucent">#80000000</color>
+
+    <color name="tab_background">@color/colorPrimary</color>
+    <color name="tab_selected_strip">#00b0ff</color>
+
     <!-- Financius -->
     <!-- ======================================================================================================== -->
     <color name="f_dark">#0a0a0b</color>
