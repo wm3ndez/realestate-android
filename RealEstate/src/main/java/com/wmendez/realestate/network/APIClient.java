@@ -8,7 +8,6 @@ import retrofit.Callback;
 import retrofit.http.GET;
 
 public class APIClient {
-    public static final String API_URL = "http://192.168.1.84:8000";
 
     public class APIResponse<T> {
         public int count;

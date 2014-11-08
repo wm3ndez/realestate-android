@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import com.squareup.picasso.Picasso;
 import com.wmendez.realestate.R;
 import com.wmendez.realestate.models.Image;
+import com.wmendez.realestate.utils.Pref;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,7 +45,8 @@ public class ImagePagerAdapter extends PagerAdapter {
             view = inflater.inflate(R.layout.property_details_images, parent, false);
         }
         imageView = (ImageView) view.findViewById(R.id.property_details_image);
-        Picasso.with(context).load(imageList.get(position).getUrl()).into(imageView);
+        String url = String.format("%s%s", Pref.getServerUrl(context), imageList.get(position).url);
+        Picasso.with(context).load(url).into(imageView);
 //        imageView.setOnClickListener(null);
 
         parent.addView(view);

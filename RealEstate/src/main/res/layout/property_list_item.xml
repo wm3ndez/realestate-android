@@ -47,10 +47,10 @@
 
 
     <LinearLayout
+        android:id="@+id/property_info"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="@drawable/text_overlay"
         android:orientation="horizontal"
         android:padding="16dp"
         android:paddingBottom="8dp">

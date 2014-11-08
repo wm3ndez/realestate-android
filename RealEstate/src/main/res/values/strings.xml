@@ -6,5 +6,8 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_property_detail">PropertyDetailActivity</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_settings">Settings</string>
+    <string name="pref_server_url_title">Server Url</string>
+    <string name="pref_server_url_description">Server Url</string>
 
 </resources>

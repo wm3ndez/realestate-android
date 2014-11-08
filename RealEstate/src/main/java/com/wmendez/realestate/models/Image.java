@@ -38,8 +38,4 @@ public class Image implements Parcelable {
         order = in.readInt();
         title = in.readString();
     }
-
-    public String getUrl(){
-        return String.format("%s%s", APIClient.API_URL, url);
-    }
 }
