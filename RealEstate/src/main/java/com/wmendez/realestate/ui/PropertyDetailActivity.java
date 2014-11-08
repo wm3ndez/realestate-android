@@ -1,19 +1,14 @@
 package com.wmendez.realestate.ui;
 
-import android.app.Activity;
-import android.app.Fragment;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
 
 import com.wmendez.realestate.R;
 import com.wmendez.realestate.models.Property;
 
-public class PropertyDetailActivity extends Activity {
+public class PropertyDetailActivity extends BaseActivity {
 
     private static final String TAG = PropertyDetailActivity.class.getCanonicalName();
 

@@ -17,7 +17,6 @@ import com.wmendez.realestate.adapters.PropertyListAdapter;
 import com.wmendez.realestate.models.Property;
 import com.wmendez.realestate.network.APIClient;
 
-import java.util.List;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -73,7 +72,7 @@ public class PropertyListFragment extends Fragment implements SwipeRefreshLayout
             }
         });
 
-        swipeLayout.setColorScheme(android.R.color.holo_blue_bright,
+        swipeLayout.setColorSchemeColors(android.R.color.holo_blue_bright,
                 android.R.color.holo_green_light,
                 android.R.color.holo_orange_light,
                 android.R.color.holo_red_light);
@@ -88,8 +87,7 @@ public class PropertyListFragment extends Fragment implements SwipeRefreshLayout
 
     @Override
     public void onRefresh() {
-        api.propertyList(new Callback<APIClient.APIResponse>() {
-
+        api.propertyList(new Callback<APIClient.APIResponse<Property>>() {
 
             @Override
             public void success(APIClient.APIResponse apiResponse, Response response) {
