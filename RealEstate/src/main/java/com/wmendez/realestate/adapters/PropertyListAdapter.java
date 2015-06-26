@@ -1,7 +1,6 @@
 package com.wmendez.realestate.adapters;
 
 import android.content.Context;
-import android.graphics.PorterDuff;
 import android.graphics.drawable.BitmapDrawable;
 import android.support.v7.graphics.Palette;
 import android.support.v7.widget.RecyclerView;
@@ -52,6 +51,7 @@ public class PropertyListAdapter extends RecyclerView.Adapter<PropertyListAdapte
                 Picasso.with(mContext).load(url).into(viewHolder.image, new Callback() {
                     @Override
                     public void onSuccess() {
+                        /*
                         Palette palette = Palette.generate(((BitmapDrawable) viewHolder.image.getDrawable())
                                 .getBitmap());
                         Palette.Swatch mutedSwatch = palette.getMutedSwatch();
@@ -65,6 +65,7 @@ public class PropertyListAdapter extends RecyclerView.Adapter<PropertyListAdapte
                         } catch (NullPointerException ex) {
                             ex.printStackTrace();
                         }
+                        */
 
                     }
 
@@ -77,7 +78,7 @@ public class PropertyListAdapter extends RecyclerView.Adapter<PropertyListAdapte
 
             viewHolder.title.setText(property.title);
             viewHolder.address.setText(property.address);
-            viewHolder.price.setText(Formatter.currency(property.price));
+            viewHolder.price.setText(Formatter.moneyFormat(property.price, false));
             viewHolder.beds.setText("" + property.beds);
             viewHolder.baths.setText("" + property.baths);
 

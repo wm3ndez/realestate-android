@@ -11,9 +11,9 @@
         <item name="colorControlHighlight">@color/accent</item>
         <item name="colorButtonNormal">@color/accent</item>
         <item name="colorSwitchThumbNormal">@color/accent</item>
-        <item name="android:colorEdgeEffect">@color/accent</item>
-        <item name="android:windowNoTitle">true</item>
+        <item name="windowNoTitle">true</item>
         <item name="windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
     </style>
 
     <style name="AppTheme" parent="AppTheme.Base">
